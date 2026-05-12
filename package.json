@@ -1,0 +1,26 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "server.js",
+  "dev": "nodemon server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oboth02Job/cse-341-project1.git"
+  },
+  "author": "Job Oboth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oboth02Job/cse-341-project1/issues"
+  },
+  "homepage": "https://github.com/oboth02Job/cse-341-project1#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
