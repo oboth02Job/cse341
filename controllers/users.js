@@ -1,7 +1,8 @@
 const ObjectId = require("mongodb").ObjectId
+const mongodb = require("../cse-341-project1/data/database")
 
 const getAll = async (req, res) => {
-const result = await mongodb
+    const result = await mongodb
         .getDatabase()
         .db()
         .collection("users")
