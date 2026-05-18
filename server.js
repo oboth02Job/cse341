@@ -2,13 +2,13 @@ const express = require("express")
 
 const dotenv = require("dotenv").config();
 
-const mongodb = require("./cse-341-project1/data/database")
+const mongodb = require("./data/database")
 
 const app = express()
 
 const port = process.env.PORT || 3000;
 
-app.use("/", require("./cse-341-project1/data"))
+app.use("/", require("./data"))
 
 mongodb.initDb((err) => {
     if (err) {

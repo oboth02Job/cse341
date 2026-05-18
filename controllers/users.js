@@ -1,26 +1,26 @@
 const ObjectId = require("mongodb").ObjectId
-const mongodb = require("../cse-341-project1/data/database")
+const mongodb = require("../data/database")
 
 const getAll = async (req, res) => {
-    const result = await mongodb
+    const result = mongodb
         .getDatabase()
-        .db()
-        .collection("users")
+        .collection("my databases")
         .find();
-result.toArray().then((users) => {
-        res.setHeader("content-Type", "application/json");
-        res.status(200).json(users);
-});
+
+    const users = await result.toArray();
+    res.setHeader("Content-Type", "application/json");
+    res.status(200).json(users);
 }
 
 const getSingle = async (req, res) => {
     const userId = new ObjectId(req.params.id)
-    const result = await mongodb.getDatabase().db().collection("users").find({_id: userId})
-    result.toArray().then((users) => {
-        res.setHeader("content-Type", "application/json")
-        res.status(200).json(users[0])
-})
-}
+    const user = await mongodb
+        .getDatabase()
+        .collection("my databases")
+        .findOne({ _id: userId })
 
+    res.setHeader("Content-Type", "application/json")
+    res.status(200).json(user)
+}
 
 module.exports = {getAll, getSingle}
