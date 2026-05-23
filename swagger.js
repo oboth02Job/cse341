@@ -5,7 +5,7 @@ const doc = {
     title: "Users Api",
     description: "Users Api",
   },
-  host: "localhost:3000",
+  host: "cse341-kf7q.onrender.com",
   schemes: ["http"],
 };
 
