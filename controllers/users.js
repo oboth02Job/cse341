@@ -62,7 +62,7 @@ const updateUser = async (req, res) => {
     .collection("my databases")
     .replaceOne({ _id: userId }, user);
   if (response.modifiedCount > 0) {
-    res.status(204).send();
+    res.status(201).send();
   } else {
     res
       .status(500)
@@ -85,6 +85,7 @@ const deleteUser = async (req, res) => {
       .json(response.error || "Some error occurred while updating user");
   }
 };
+
 
 
 module.exports = { getAll, getSingle, createUser, updateUser, deleteUser };
