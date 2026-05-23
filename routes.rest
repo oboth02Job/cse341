@@ -1,0 +1,34 @@
+### Get all users
+GET http://localhost:3000/users
+
+### Get user by id
+GET http://localhost:3000/users/6a0818a3f67c4728ebe99919
+
+### Create user
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Jayson",
+  "lastName": "Pope",
+  "email": "pope@gmail.com",
+  "favoriteColor": "Brown",
+  "birthday": "06/14/2000"
+}
+
+### PUT user (update)
+PUT http://localhost:3000/users/6a0818a3f67c4728ebe99917 HTTP/1.1
+content-type: application/json
+
+{
+ "_id": "6a0818a3f67c4728ebe99917",
+    "firstName": "Job",
+    "lastName": "Oboth",
+    "email": "trappsavage611@gmail.com",
+    "favoriteColor": "Black",
+    "birthday": "1999-02-04"
+}
+
+
+### Delete user (update)
+DELETE http://localhost:3000/users HTTP/1.1
